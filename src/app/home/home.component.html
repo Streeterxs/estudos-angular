@@ -1,0 +1,29 @@
+<section class="section is-fullhd">
+    <h1 id="titulomercado" class="title is-1 has-text-centered">{{title}}</h1>
+    <section class="is-centered">
+
+        <div class="container box has-background-link has-text-white">
+            <h2 class="subtitle is-4 has-text-white has-text-centered">Total de itens na lista ({{totalnalista}})</h2>
+            <div>
+                <p id="listamercado" *ngFor = "let list of lista; let i = index" (click)="removerDaLista(i)">
+                    {{list}}
+                </p>
+            </div>
+        </div>
+
+        <div id="enviolista"  class="container navbar">
+                <form class="control navbar-menu">
+                    <div class="navbar-end">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input name="teste"  [(ngModel)] = "listateste" class="input" type="text" placeholder="Adicionar na Lista">
+                            </div>
+                            <div class="control">
+                                    <input class="button is-primary" type="submit" (click)="adicionarNaLista()">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </section>
+</section>
