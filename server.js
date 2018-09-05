@@ -4,7 +4,7 @@ path = require('path');
 const app =express();
 
 
-app.use(express.static('./app-deploy-test/dist'));
+app.use(express.static('./app-deploy-test/dist/'));
 
 app.get('/*', (req,res)=>{
 
