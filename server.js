@@ -4,11 +4,11 @@ path = require('path');
 const app =express();
 
 
-app.use(express.static('./dist/app-deploy-test'));
+app.use(express.static('./app-deploy-test/dist'));
 
 app.get('/*', (req,res)=>{
 
-res.sendFile(path.join(__dirname,'/dist/app-deploy-test/index.html'));
+res.sendFile(path.join(__dirname,`./app-deploy-test/dist/index.html`));
 
 });
 
